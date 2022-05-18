@@ -1,10 +1,24 @@
 ﻿@page
 @model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="col-2 text-right">
+    <a class="mt-2 btn btn-success form-control" asp-action="AddProduct">Sell item</a>
 </div>
+<table class="table table-striped border-collapse">
+    <tr class="table-info">
+        <th>
+            [filter]
+        </th>
+    </tr>
+    @foreach (var item in Model.Products)
+    {
+        <td>
+            @item.Name
+            <a asp-action="AddCart" btn="" asp-route-id="@item.Id"class="btn btn-outline-primary mx-1">Add to cart</a>
+        </td>
+    }
+</table>  
+

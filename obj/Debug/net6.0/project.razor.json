@@ -16338,6 +16338,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\Pages\\ProductPage\\Announce.cshtml",
+      "TargetPath": "Pages\\ProductPage\\Announce.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"

@@ -6,6 +6,7 @@ public class Product
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public Size Size { get; set; } = Size.M;
+    public string Name { get; set; } = String.Empty;
 	public Color Color { get; set; } = Color.White;
 	public string Image { get; set; } = String.Empty;
     public decimal Price { get; set; } = 0;
