@@ -4,12 +4,20 @@
 <h1 class="text-info">
     Add Announce
 </h1>
-<form method="post" role="form">
+
+
+<form method="post" enctype="multipart/form-data" role="form">
     <div class="text-danger" asp-validation-summary="All"></div>
     <div class="form-group">
         <label asp-for="@Model.Product.Name"></label>
         <div class="col-md-10">
             <input asp-for="@Model.Product.Name" class="form-control" />
+        </div>
+    </div>
+        <div class="form-group">
+        <label asp-for="@Model.Product.Price"></label>
+        <div class="col-md-10">
+            <input asp-for="@Model.Product.Price" class="form-control" />
         </div>
     </div>
         <div class="form-group">
@@ -25,15 +33,34 @@
             </select>
         </div>
     </div>
+        <div class="form-group">
+        <label asp-for="@Model.Product.Color"></label>
+        <div class="col-md-10">
+            <select asp-for="@Model.Product.Color">
+                <option value=0>White</option>
+                <option value=1>Red</option>
+                <option value=2>Green</option>
+                <option value=3>Blue</option>
+                <option value=4>Yellow</option>
+                <option value=5>Beige</option>
+                <option value=6>Purple</option>
+                <option value=7>Pink</option>
+                <option value=8>Black</option>
+                <option value=9>Gray</option>
+            </select>
+        </div>
+    </div>
 
     <div class="form-group">
          <label asp-for="@Model.Product.Description"></label>
          @Html.TextAreaFor(model => model.Product.Description, new { @class = "form-control", @rows = 4 })
+
     </div>
+    
         <div class="form-group">
             <label asp-for="@Model.Product.Image" class="control-label"></label>
-            <input type="file" name="file" class="form-control-file" />
-            <span asp-validation-for="@Model.Product.Image" class="text-danger"></span>
+            <input type="file" name="files" class="form-control" />
+
         </div>
         
     <div class="form-group">

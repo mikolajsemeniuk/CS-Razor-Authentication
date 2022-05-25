@@ -1,0 +1,56 @@
+table, th, td{
+    border: 1 px solid #eeeeee;   
+}
+
+.clear{
+    clear: both;
+}
+.error{
+    color: red;
+}
+.div-container{
+
+}
+    .div-container .div-left{
+        float:left;
+        width: 20%;
+
+    }
+    .div-container .div-left .left-title{
+        text-align:left;
+        padding:10px;
+        font-weight: Bold;
+        background-color: #badce3;
+        color:white;
+        text-transform: uppercase;
+    }
+    .div-container .div-left .left-menu{
+        
+        
+    }
+    .div-container .div-left .left-menu ul{
+       
+    }
+    .div-container .div-left .left-menu ul li{
+        line-height:30px;
+    }
+    .div-container .div-left .left-menu ul li a{
+        color: #24276f
+    }
+    .div-container .div-left .left-menu li a:hover{
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+.div-container .div-main{
+    width: 80%;
+    float: left;
+    padding: 10px;
+}
+.div-container .div-footer{
+    padding:  15px 0 15px 0;
+}
+
+.div-container .div-product{
+    
+}

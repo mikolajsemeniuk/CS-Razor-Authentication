@@ -5,7 +5,12 @@
       "ProjectGuid": "5889895a-c483-4884-b4f4-83e56426941d",
       "DisplayName": "application",
       "ColorIndex": 0
+    },
+    "330a5844-787e-4ed3-b09d-0c888ecd2b59": {
+      "ProjectGuid": "330a5844-787e-4ed3-b09d-0c888ecd2b59",
+      "DisplayName": "application",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

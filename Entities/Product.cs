@@ -1,4 +1,6 @@
 using Enums;
+using Inputs;
+using Microsoft.AspNetCore.Identity;
 
 namespace Entities;
 
@@ -13,4 +15,6 @@ public class Product
     public string Description { get; set; } = String.Empty;
     public DateTime Created { get; set; } = DateTime.Now;
     public DateTime? Updated { get; set; } = null;
+    public Register User { get; set; } = null;
+    public Category Category { get; set; } = Category.Other;
 }

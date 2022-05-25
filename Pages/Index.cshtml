@@ -1,24 +1,69 @@
 ﻿@page
 @model IndexModel
 
+@inject Microsoft.AspNetCore.Identity.SignInManager<Entities.Account> SignInManager
+
 @{
     ViewData["Title"] = "Home page";
 }
-<div class="col-2 text-right">
-    <a class="mt-2 btn btn-success form-control" asp-action="AddProduct">Sell item</a>
-</div>
-<table class="table table-striped border-collapse">
-    <tr class="table-info">
-        <th>
-            [filter]
-        </th>
-    </tr>
-    @foreach (var item in Model.Products)
-    {
-        <td>
-            @item.Name
-            <a asp-action="AddCart" btn="" asp-route-id="@item.Id"class="btn btn-outline-primary mx-1">Add to cart</a>
-        </td>
-    }
-</table>  
 
+<div class="container body-content">
+    <div class="div-container">
+        <div class="div-left">
+            <div class="left-title">Catgeory
+                <div class="left-menu">
+                    <ul>
+                        <li>
+                           <a href="#">Category 1</a>
+                        </li>
+                        <li>
+                           <a href="#">Category 2</a>
+                        </li> 
+                        <li>
+                           <a href="#">Category 3</a>
+                        </li>
+                        <li>
+                           <a href="#">Category 4</a>
+                        </li>
+                        <li>
+                           <a href="#">Category 5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="div-main">
+                <asp:ContentPlaceholder ID="MainContent" runat="server"></asp:ContentPlaceholder>
+                <table class="table table-striped border-collapse">
+                    <tr class="table-info">
+                        <th>
+                            [filter]
+                        </th>
+                    </tr>
+                        @if(Model.Products.Count() > 0 )
+                        {
+                            @foreach (var item in Model.Products)
+                            {
+                                <td>
+                                    <div class="div-container">
+                                        <img src="C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Image/test.jpg" height="80" width="120"></img>
+                                    </div> 
+                                    <div text-align="left">
+                                        @item.Name
+                                       @item.Price
+                                    </div> 
+                                    <a asp-action="AddCart" btn="" asp-route-id="@item.Id"class="btn btn-outline-primary mx-1">Add to cart</a>
+                                </td>
+                            }
+                        }
+                </table>  
+            </div>
+    </div>
+</div>
+
+@if (SignInManager.IsSignedIn(User))
+{ 
+    <div class="col-2 text-right">
+        <a asp-page="/ProductPage/Announce" class="mt-2 btn btn-success form-control" >Sell item</a>
+    </div>
+}

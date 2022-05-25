@@ -11,13 +11,19 @@
     <title>@ViewData["Title"] - application</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
     <link rel="stylesheet" href="~/application.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
+    <div class="jumbotron text-center" backgroundColor="gray">
+        <h1>Clothing store</h1>
+        <p>Here you will find your clothes</p>
+    </div>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">application</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Store</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -53,15 +59,25 @@
             </div>
         </nav>
     </header>
+
+
+
+
     <div class="container">
-        <main role="main" class="pb-3">
+        <div class="row">         
+        <main role="main" class="pb-3" >
             @RenderBody()
         </main>
+        </div>
+    </div>
+
+
+
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - application - <a asp-area="" asp-page="/Privacy">Privacy</a>
+          &copy;  @@ @DateTime.Now  <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
