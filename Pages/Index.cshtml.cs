@@ -27,22 +27,17 @@ public class IndexModel : PageModel
     public Product Product { get; set; } = new();
     public IEnumerable<Product> Products {get;set; }
     public IEnumerable<Category> Categories = Enum.GetValues(typeof(Category)).Cast<Category>().ToList();
-    public string Message { get; private set; } = "PageModel in C#";
-    public async Task<IActionResult> OnGet()
+    public bool chekPara = false;
+    public string Category { get; set; }
+    public async Task<IActionResult> OnGet([FromQuery(Name = "id")] string? id)
     {
         Products = await _context.Products.ToListAsync();
-        
+        if(id!=null){
+            Products = Products.Where(p=>p.Category.ToString() == id);
+            Category = id;
+            chekPara =true;
+        }
         return Page();
     }
-
- 
-    public async Task<IActionResult> GetCategorie(string id)
-    {
-        foreach (Category category in Categories){
-            Products = await _context.Products.Where(product => category.ToString() == id).ToListAsync();
-        }       
-        return Page();
-    }
-
     
 }

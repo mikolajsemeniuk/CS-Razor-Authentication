@@ -19,5 +19,5 @@ public class Product
     //public User User { get; set; } = null;
 
     //[NotMapped]
-    public Category Category { get; set; } = Category.Other;
+    public Category Category { get; set; } 
 }

@@ -1,6 +1,6 @@
 ﻿@page
 @model IndexModel
-@addTagHelper *, cloudscribe.Web.Pagination
+
 @inject Microsoft.AspNetCore.Identity.SignInManager<Entities.Account> SignInManager
 
 @{
@@ -13,16 +13,11 @@
             <div class="left-title">Catgeory
                 <div class="left-menu">
                     <ul>
-                        <asp:repeater ID="rptCategoryMenu" runat="server">
-                            <ItemTemplate>
-                                @foreach (var item in @Model.Categories){
-                                <li>                                   
-                                    @* <asp:hyperLink ID="hyperlink" runat="server" navigateUrl="#">@item</asp:hyperLink> *@
-                                    <a asp-route-id="@item"  asp-action="GetCategorie">@item</a>
-                                </li>
-                                 }
-                            </ItemTemplate>
-                        </asp:repeater>
+                            @foreach (var item in @Model.Categories){
+                            <li>                                   
+                                <a asp-route-id="@item">@item</a>
+                            </li>
+                            }
                     </ul>
                 </div>
             </div>
@@ -33,9 +28,9 @@
                 <table class="table table-striped border-collapse">
                     <tr class="table-info">
                         <th>
-                            @if(Request.Headers != null)
+                            @if(@Model.chekPara)
                             {
-                                <a>a</a>
+                                <a>@Model.Category</a>
                             }
                             else{
                                 <a>[filter]</a>
