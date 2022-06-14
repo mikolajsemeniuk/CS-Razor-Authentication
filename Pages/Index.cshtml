@@ -1,10 +1,81 @@
 ﻿@page
 @model IndexModel
+
+@inject Microsoft.AspNetCore.Identity.SignInManager<Entities.Account> SignInManager
+
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container body-content">
+    <div class="div-container">
+        <div class="div-left">
+            <div class="left-title">Catgeory
+                <div class="left-menu">
+                    <ul>
+                            @foreach (var item in @Model.Categories){
+                            <li>                                   
+                                <a asp-route-id="@item">@item</a>
+                            </li>
+                            }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+            <div class="div-main">
+                <asp:ContentPlaceholder ID="MainContent" runat="server"></asp:ContentPlaceholder>
+                <table class="table table-striped border-collapse">
+                    <tr class="table-info">
+                        <th>
+                            @if(@Model.chekPara)
+                            {
+                                <a>@Model.Category</a>
+                            }
+                            else{
+                                <a>[filter]</a>
+                            }
+                            
+                        </th>
+                    </tr>
+                        @if(Model.Products.Count() > 0 )
+                        {
+                            @foreach (var item in Model.Products)
+                            {
+                                <td>
+                                    <div class="div-container">
+                                        <img src="C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Image/test.jpg" height="80" width="120"></img>
+                                    </div> 
+                                    <div text-align="left">
+                                        @item.Name
+                                        @item.Price
+                                    </div> 
+                                    <a asp-action="AddCart" btn="" asp-route-id="@item.Id"class="btn btn-outline-primary mx-1">Add to cart</a>
+                                </td>                             
+                            }                           
+                        }
+                </table>  
+@*                                                <cs-pager 
+                        cs-paging-pagenumber="4"
+                        cs-paging-totalitems="4"
+                        cs-pagenumber-param="pagenumber"
+                        
+                        asp-action = "Index"
+                > </cs-pager>*@
+@*                <form asp-page ="./Index" method="get">
+                    
+                    </form>*@
+
+            </div>
+            
+    </div>
 </div>
+
+@* @if (SignInManager.IsSignedIn(User))
+{  *@
+    <div class="col-3 text-right">
+        <div class="button">
+        <a asp-page="/ProductPage/Announce" class="mt-2 btn btn-success form-control" >Sell item</a>
+        </div>
+    </div>
+@* } *@

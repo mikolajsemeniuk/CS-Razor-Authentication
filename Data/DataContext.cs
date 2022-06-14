@@ -13,9 +13,15 @@ public class DataContext : IdentityDbContext<Account, Role, Guid,
     {
     }
 
+    public DbSet<Product> Products => Set<Product>();
     protected override void OnModelCreating(ModelBuilder builder)
     {
+
         base.OnModelCreating(builder);
+
+
+  
+
 
         builder.Entity<Account>()
             .HasMany(account => account.AccountRoles)

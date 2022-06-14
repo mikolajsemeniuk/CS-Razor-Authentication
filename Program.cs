@@ -2,7 +2,6 @@ using Data;
 using Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Nest;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,14 +11,17 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var connectionSettings = new ConnectionSettings(new Uri("http://127.0.0.1:9200"));
-    // .DefaultMappingFor<Product>(x => x.IndexName("products"));
+// var connectionSettings = new ConnectionSettings(new Uri("http://127.0.0.1:9200"));
+// .DefaultMappingFor<Product>(x => x.IndexName("products"));
 
-builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettings));
+//builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettings));
+
+
 
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
     options.User.RequireUniqueEmail = true;
+    
 })
     .AddRoles<Role>()
     .AddRoleManager<RoleManager<Role>>()
@@ -27,6 +29,7 @@ builder.Services.AddDefaultIdentity<Account>(options =>
     .AddRoleValidator<RoleValidator<Role>>()
     .AddEntityFrameworkStores<DataContext>();
 
+builder.Services.AddCloudscribePagination();
 
 var app = builder.Build();
 

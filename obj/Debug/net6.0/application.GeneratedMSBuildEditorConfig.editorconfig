@@ -8,49 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = application
 build_property.RootNamespace = application
-build_property.ProjectDir = /Users/mikolajsemeniuk/Projects/application/
+build_property.ProjectDir = C:\Users\mariu\Desktop\SpotkajmySie\CS-Razor-Authentication\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/mikolajsemeniuk/Projects/application
+build_property.MSBuildProjectDirectory = C:\Users\mariu\Desktop\SpotkajmySie\CS-Razor-Authentication
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Account/Logout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/ProductPage/Announce.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFBhZ2VcQW5ub3VuY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/ProductPage/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFBhZ2VcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/mikolajsemeniuk/Projects/application/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-omgvx0xdd2
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mariu/Desktop/SpotkajmySie/CS-Razor-Authentication/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-5aht4x1nj7
