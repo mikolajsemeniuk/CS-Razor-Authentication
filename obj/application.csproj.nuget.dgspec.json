@@ -65,6 +65,10 @@
             "NEST": {
               "target": "Package",
               "version": "[7.17.1, )"
+            },
+            "cloudscribe.Web.Pagination": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

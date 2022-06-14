@@ -1,6 +1,6 @@
 ﻿@page
 @model IndexModel
-
+@addTagHelper *, cloudscribe.Web.Pagination
 @inject Microsoft.AspNetCore.Identity.SignInManager<Entities.Account> SignInManager
 
 @{
@@ -13,31 +13,34 @@
             <div class="left-title">Catgeory
                 <div class="left-menu">
                     <ul>
-                        <li>
-                           <a href="#">Category 1</a>
-                        </li>
-                        <li>
-                           <a href="#">Category 2</a>
-                        </li> 
-                        <li>
-                           <a href="#">Category 3</a>
-                        </li>
-                        <li>
-                           <a href="#">Category 4</a>
-                        </li>
-                        <li>
-                           <a href="#">Category 5</a>
-                        </li>
+                        <asp:repeater ID="rptCategoryMenu" runat="server">
+                            <ItemTemplate>
+                                @foreach (var item in @Model.Categories){
+                                <li>                                   
+                                    @* <asp:hyperLink ID="hyperlink" runat="server" navigateUrl="#">@item</asp:hyperLink> *@
+                                    <a asp-route-id="@item"  asp-action="GetCategorie">@item</a>
+                                </li>
+                                 }
+                            </ItemTemplate>
+                        </asp:repeater>
                     </ul>
                 </div>
             </div>
         </div>
+        
             <div class="div-main">
                 <asp:ContentPlaceholder ID="MainContent" runat="server"></asp:ContentPlaceholder>
                 <table class="table table-striped border-collapse">
                     <tr class="table-info">
                         <th>
-                            [filter]
+                            @if(Request.Headers != null)
+                            {
+                                <a>a</a>
+                            }
+                            else{
+                                <a>[filter]</a>
+                            }
+                            
                         </th>
                     </tr>
                         @if(Model.Products.Count() > 0 )
@@ -50,20 +53,34 @@
                                     </div> 
                                     <div text-align="left">
                                         @item.Name
-                                       @item.Price
+                                        @item.Price
                                     </div> 
                                     <a asp-action="AddCart" btn="" asp-route-id="@item.Id"class="btn btn-outline-primary mx-1">Add to cart</a>
-                                </td>
-                            }
+                                </td>                             
+                            }                           
                         }
                 </table>  
+@*                                                <cs-pager 
+                        cs-paging-pagenumber="4"
+                        cs-paging-totalitems="4"
+                        cs-pagenumber-param="pagenumber"
+                        
+                        asp-action = "Index"
+                > </cs-pager>*@
+@*                <form asp-page ="./Index" method="get">
+                    
+                    </form>*@
+
             </div>
+            
     </div>
 </div>
 
-@if (SignInManager.IsSignedIn(User))
-{ 
-    <div class="col-2 text-right">
+@* @if (SignInManager.IsSignedIn(User))
+{  *@
+    <div class="col-3 text-right">
+        <div class="button">
         <a asp-page="/ProductPage/Announce" class="mt-2 btn btn-success form-control" >Sell item</a>
+        </div>
     </div>
-}
+@* } *@

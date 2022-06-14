@@ -8,8 +8,11 @@ table, th, td{
 .error{
     color: red;
 }
+.button{
+    padding:22px;
+}
 .div-container{
-
+    margin-top:  20px;
 }
     .div-container .div-left{
         float:left;

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Enums;
+using System.Diagnostics;
 
 namespace application.Pages;
 
@@ -24,12 +26,23 @@ public class IndexModel : PageModel
     
     public Product Product { get; set; } = new();
     public IEnumerable<Product> Products {get;set; }
+    public IEnumerable<Category> Categories = Enum.GetValues(typeof(Category)).Cast<Category>().ToList();
     public string Message { get; private set; } = "PageModel in C#";
     public async Task<IActionResult> OnGet()
     {
-
         Products = await _context.Products.ToListAsync();
         
         return Page();
     }
+
+ 
+    public async Task<IActionResult> GetCategorie(string id)
+    {
+        foreach (Category category in Categories){
+            Products = await _context.Products.Where(product => category.ToString() == id).ToListAsync();
+        }       
+        return Page();
+    }
+
+    
 }

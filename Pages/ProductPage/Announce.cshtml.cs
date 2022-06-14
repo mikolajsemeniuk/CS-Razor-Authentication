@@ -14,16 +14,18 @@ public class AnnounceModel : PageModel
     private readonly DataContext _context;
     private readonly IWebHostEnvironment _env;
     
+    //private readonly SignInManager<Entities.Account> _signInManager;
     // private readonly HostingEnvironment _hostingEnvironment;
     
     [BindProperty]
     public Product Product { get; set; } = new();
 
-    public AnnounceModel(ILogger<IndexModel> logger, DataContext context, IWebHostEnvironment env)
+    public AnnounceModel(ILogger<IndexModel> logger, DataContext context, IWebHostEnvironment env)// SignInManager<Entities.Account> signInManager
     {
         _logger = logger;
         _context = context;
         _env = env;
+       // _signInManager = signInManager;
         //_hostingEnvironment = hostingEnvironment;
     }
 
@@ -31,6 +33,8 @@ public class AnnounceModel : PageModel
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> OnPost([Bind("Name,Price,Size,Color,Description,Image,Created")] Product product )//,IFormFile file
     {
+       // var u= _signInManager.GetExternalLoginInfoAsync();
+        //_context
         product = new Product
         {
             Id = Product.Id,
@@ -39,6 +43,7 @@ public class AnnounceModel : PageModel
             Size = Product.Size,  
             Color = Product.Color,
             Description = Product.Description,
+           // User = Product.User,
             Created = DateTime.Now            
         };  
 
