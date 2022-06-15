@@ -1,3 +1,4 @@
+using application.Pages;
 using Data;
 using Entities;
 using Microsoft.AspNetCore.Identity;
@@ -16,7 +17,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 //builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettings));
 
-
+builder.Services.AddScoped<IPersonService, PersonService>();
 
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
