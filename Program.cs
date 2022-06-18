@@ -22,11 +22,12 @@ builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddMvc();
 
 
-//builder.Services.AddSingleton<Cart>();
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
     options.User.RequireUniqueEmail = true;
-    
+    options.Password.RequireDigit = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = false;
 })
     .AddRoles<Role>()
     .AddRoleManager<RoleManager<Role>>()

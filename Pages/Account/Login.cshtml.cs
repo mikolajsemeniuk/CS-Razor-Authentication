@@ -18,6 +18,15 @@ public class LoginModel : PageModel
         _signInManager = signInManager;
         _userManager = userManager;
     }
+    
+    public IActionResult OnGet()
+    {
+        if (_signInManager.IsSignedIn(User))
+        {
+            return RedirectToPage("/Index");
+        }
+        return Page();
+    }
 
     public async Task<IActionResult> OnPost()
     {

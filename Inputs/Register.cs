@@ -16,6 +16,7 @@ public class Register
     [Display(Name = "Password")]
     [Required(AllowEmptyStrings = false, ErrorMessage = "Whitespaces are not allowed")]
     [StringLength(64, MinimumLength = 6, ErrorMessage = "{0} has to be {2} characters minimum and {1} characters maximum")]
+    [RegularExpression(@"(.*[A-Z].*\d.*)|(.*\d.*[A-Z].*)", ErrorMessage = "Password need to contains at least one number and at least one uppercase")]
     [DataType(DataType.Password)]
     public string Password { get; set; } = String.Empty;
 
