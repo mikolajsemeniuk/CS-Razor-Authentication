@@ -49,7 +49,6 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        Console.WriteLine("Invalid");
         return Page();
     }
 }
