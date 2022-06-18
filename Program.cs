@@ -20,6 +20,9 @@ builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettin
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
     options.User.RequireUniqueEmail = true;
+    options.Password.RequireDigit = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = false;
 })
     .AddRoles<Role>()
     .AddRoleManager<RoleManager<Role>>()
