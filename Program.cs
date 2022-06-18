@@ -16,7 +16,6 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddMvc();
 
-
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
     options.User.RequireUniqueEmail = true;
@@ -32,8 +31,8 @@ builder.Services.AddDefaultIdentity<Account>(options =>
     
 builder.Services.AddCloudscribePagination();
 
- builder.Services.AddMvc().AddSessionStateTempDataProvider(); //
- builder.Services.AddSession(); // 
+builder.Services.AddMvc().AddSessionStateTempDataProvider();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -47,20 +46,14 @@ if (!app.Environment.IsDevelopment())
  
 app.UseSession();
 
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-
-
 app.UseRouting();
 app.UseAuthentication();
-
         
 app.UseAuthorization();
 
 app.MapRazorPages();
-
-
 
 app.Run();
