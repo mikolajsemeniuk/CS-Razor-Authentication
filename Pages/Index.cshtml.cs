@@ -15,7 +15,7 @@ public class IndexModel : PageModel
     private readonly SignInManager<Entities.Account> _signInManager;
     private readonly UserManager<Entities.Account> _userManager;
     private readonly IPersonService _personService;
-    public int CurrentPage { get; set; } = 1;
+    //public int CurrentPage { get; set; } = 1;
     public int Count { get; set; }
     public int PageSize { get; set; } = 4;
     public int TotalPages => (int)Math.Ceiling(decimal.Divide(Count, PageSize));
@@ -28,7 +28,6 @@ public class IndexModel : PageModel
         _userManager = userManager;
     }
 
-    public Product Product { get; set; } = new();
     public IEnumerable<Product> Products {get;set; } 
     public IEnumerable<Category> Categories = Enum.GetValues(typeof(Category)).Cast<Category>().ToList();
     public bool ifParameterIsSet { get; set; }= false;
@@ -49,10 +48,7 @@ public class IndexModel : PageModel
             return Page();
         }
         return Page();
-
     }
-
-
 }
     public interface IPersonService
     {

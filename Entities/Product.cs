@@ -16,8 +16,5 @@ public class Product
     public string Description { get; set; } = String.Empty;
     public DateTime Created { get; set; } = DateTime.Now;
     public DateTime? Updated { get; set; } = null;
-    //public User User { get; set; } = null;
-
-    //[NotMapped]
     public Category Category { get; set; } 
 }

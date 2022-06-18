@@ -1,0 +1,20 @@
+@page 
+@model Cart
+
+
+   <title>Cart</title>
+   <h3>Cart Info</h3>
+     <div class="div-main">
+            <table class="table table-striped">
+             @foreach (var item in Model.cart)
+             {
+                 <tr>
+                    <td>@item.Product.Id</td>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Product.Price</td>
+                    <td>@item.Quantity</td>
+                </tr>         
+             }
+             </table>     
+       <a asp-page ="/Index">Continue Shopping</a>
+     </div>  

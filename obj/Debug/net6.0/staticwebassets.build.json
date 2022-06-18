@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1AI5UcYYmJNZuf1tHC3EWcPmvTlGzNikPf6NGFYR7Zs=",
+  "Hash": "pDBm+aC6v28GNPrnCOvSjxy2s1X5ccy6BQ1KJyaSaGQ=",
   "Source": "application",
   "BasePath": "_content/application",
   "Mode": "Default",
@@ -1139,6 +1139,40 @@
       "OriginalItemSpec": "wwwroot\\Images09fe9328-98c4-4792-b936-b953bc0a307d.jpg"
     },
     {
+      "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Images0ace61b9-9f98-47fc-8d83-575be1813f2c.jpg",
+      "SourceId": "application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\",
+      "BasePath": "_content/application",
+      "RelativePath": "Images0ace61b9-9f98-47fc-8d83-575be1813f2c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images0ace61b9-9f98-47fc-8d83-575be1813f2c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Images2ee1ffa9-b1f9-410e-a22c-cd135f4c73eb.jpg",
+      "SourceId": "application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\",
+      "BasePath": "_content/application",
+      "RelativePath": "Images2ee1ffa9-b1f9-410e-a22c-cd135f4c73eb.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images2ee1ffa9-b1f9-410e-a22c-cd135f4c73eb.jpg"
+    },
+    {
       "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Images5039b8b6-18db-47b1-927b-b8a56ccfd21f.jpg",
       "SourceId": "application",
       "SourceType": "Discovered",
@@ -1154,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images5039b8b6-18db-47b1-927b-b8a56ccfd21f.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Images6d6d12ca-18f2-4c65-ac9d-df3d66550e86.jpg",
+      "SourceId": "application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\",
+      "BasePath": "_content/application",
+      "RelativePath": "Images6d6d12ca-18f2-4c65-ac9d-df3d66550e86.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images6d6d12ca-18f2-4c65-ac9d-df3d66550e86.jpg"
     },
     {
       "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Images706c9a3b-81e1-4969-acad-e045db1f4f51.jpg",
@@ -1224,6 +1275,23 @@
       "OriginalItemSpec": "wwwroot\\Imagesd421f9ab-fba7-465a-9fb3-7fb299a8966b.jpg"
     },
     {
+      "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Imagesd8e5aee1-6247-416b-a890-ef7e9640cf94.jpg",
+      "SourceId": "application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\",
+      "BasePath": "_content/application",
+      "RelativePath": "Imagesd8e5aee1-6247-416b-a890-ef7e9640cf94.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagesd8e5aee1-6247-416b-a890-ef7e9640cf94.jpg"
+    },
+    {
       "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Imagesdd4677a0-9e8d-4be8-8181-3c0e2bec8941.jpg",
       "SourceId": "application",
       "SourceType": "Discovered",
@@ -1239,6 +1307,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagesdd4677a0-9e8d-4be8-8181-3c0e2bec8941.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Imagesdf982d3a-b261-4a5d-9857-5644cc273706.jpg",
+      "SourceId": "application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\",
+      "BasePath": "_content/application",
+      "RelativePath": "Imagesdf982d3a-b261-4a5d-9857-5644cc273706.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagesdf982d3a-b261-4a5d-9857-5644cc273706.jpg"
     },
     {
       "Identity": "C:\\Users\\mariu\\Desktop\\SpotkajmySie\\CS-Razor-Authentication\\wwwroot\\Imagese5daeef9-5b34-4616-8911-16f7a1163985.jpg",

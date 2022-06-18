@@ -1,4 +1,5 @@
 using application.Pages;
+using application.Pages.ProductPage;
 using Data;
 using Entities;
 using Microsoft.AspNetCore.Identity;
@@ -18,7 +19,10 @@ builder.Services.AddDbContext<DataContext>(options =>
 //builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettings));
 
 builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddMvc();
 
+
+//builder.Services.AddSingleton<Cart>();
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
     options.User.RequireUniqueEmail = true;
@@ -29,8 +33,11 @@ builder.Services.AddDefaultIdentity<Account>(options =>
     .AddSignInManager<SignInManager<Account>>()
     .AddRoleValidator<RoleValidator<Role>>()
     .AddEntityFrameworkStores<DataContext>();
-
+    
 builder.Services.AddCloudscribePagination();
+
+ builder.Services.AddMvc().AddSessionStateTempDataProvider(); //
+ builder.Services.AddSession(); // 
 
 var app = builder.Build();
 
@@ -41,15 +48,23 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+ 
+app.UseSession();
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+
+
 app.UseRouting();
 app.UseAuthentication();
 
+        
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+
 
 app.Run();
