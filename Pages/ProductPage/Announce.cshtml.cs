@@ -21,7 +21,7 @@ public class AnnounceModel : PageModel
     }
 
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> OnPost([Bind("Name,Price,Size,Color,Description,Image,Created")] Product product)
+    public async Task<IActionResult> OnPost([Bind("Name,Price,Size,Color,Description,Image,Created,Category")] Product product)
     {
         product = new Product
         {
@@ -31,7 +31,9 @@ public class AnnounceModel : PageModel
             Size = Product.Size,  
             Color = Product.Color,
             Description = Product.Description,
-            Created = DateTime.Now            
+            Created = DateTime.Now,
+            Category = Product.Category 
+
         };  
 
         if (ModelState.IsValid)

@@ -16,7 +16,7 @@
                     <ul>
                             @foreach (var item in @Model.Categories){
                             <li>                                   
-                                <a asp-route-id="@item">@item</a>
+                                <a asp-route-id="@item" {asp-route-id=@Model.CategoryHelper } >@item</a>
                             </li>
                             }
                             <li>
@@ -33,7 +33,7 @@
                     <tr class="table-info">
                         @if(@Model.ifParameterIsSet)
                         {
-                            <a>@Model.Category</a>
+                            <a>@Model.CategoryHelper</a>
                         }
                         else{
                             <a>Category</a>
@@ -50,9 +50,9 @@
                                     <div text-align="left">
                                         @item.Name
                                         @item.Price
+                                        @item.Category <a> :kategoria</a>
                                     </div> 
                                     <a asp-page="/ProductPage/Cart" asp-route-id="@item.Id" class="btn btn-outline-primary mx-1">Add to cart</a>
-                                     @* asp-action="AddCart" btn=""  *@
                                 </tr>                             
                             }                          
                         }
@@ -63,28 +63,30 @@
     </div>
 </div>
 
-@* @if (SignInManager.IsSignedIn(User))
-{  *@
+@if (SignInManager.IsSignedIn(User))
+{ 
     <div class="col-3 text-right">
         <div class="button">
         <a asp-page="/ProductPage/Announce" class="mt-2 btn btn-success form-control" >Sell item</a>
         </div>
     </div>
-@* } *@
-
-
-
-
-
-
+}
 
 <div>
     <ul class="pagination">
         @for (var i = 1; i <= Model.TotalPages; i++)
         {
+            @if(@Model.CategoryHelper != null)
+            {
             <li>
-                <a asp-route-currentpage="@i" class="page-link">@i</a>
+                <a asp-route-id="@Model.CategoryHelper" asp-route-currentpage="@i"  class="page-link">@i</a>
             </li>
+            }
+            else{
+                <li>
+                <a asp-route-currentpage="@i"  class="page-link">@i</a>
+            </li>
+            }
         }
     </ul>
 </div>

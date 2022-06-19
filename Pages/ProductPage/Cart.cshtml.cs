@@ -23,13 +23,14 @@ public class Cart : PageModel
 
     public IActionResult OnGet([FromQuery(Name = "id")] string? id)
     {
-        // FIXME: omit null checking
+        //Total = cart.Sum(item => item.Product.Price * item.Quantity);
         if(id != null)
         {
             // FIXME: handle not found
             var product = _context.Products.Where(p => p.Id == Guid.Parse(id)).FirstOrDefault();
             if (product == null)
             {
+                Total = Total + cart.Sum(item => item.Product.Price * item.Quantity);
                 // FIXME: return to not found page
                 return Page();
             } 
@@ -38,24 +39,35 @@ public class Cart : PageModel
             if(cart == null)
             {
                 cart = new List<Item>();
-                cart.Add(new Item(product, 1));
-                JSON.Marshal(HttpContext.Session, "cart", cart);
+                Total = cart.Sum(item => item.Product.Price * item.Quantity);                
+                cart.Add(new Item(product, 1));              
+                JSON.Marshal(HttpContext.Session, "cart", cart); 
             }
             else
             {
+                Total = cart.Sum(item => item.Product.Price * item.Quantity);
                 var index = Exists(cart, id);
                 if(index == -1)
                 {
                     cart.Add(new Item(product, 1));
+                    Total =  cart.Sum(item => item.Product.Price * item.Quantity);
                 }
                 else
                 {
                     var newQuantity = cart[index].Quantity +1;
                     cart[index].Quantity = newQuantity;
+                    Total = Total + cart.Sum(item => item.Product.Price * item.Quantity);
                 }
                 JSON.Marshal(HttpContext.Session, "cart", cart);
             }
-            return Page();
+            
+        }
+        else
+        {
+            try{}
+            catch{
+                throw new Exception("Product unknown");
+            }      
         }
 
         int Exists(List<Item> cart, string id)

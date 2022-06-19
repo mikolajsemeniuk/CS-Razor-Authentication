@@ -1,0 +1,22 @@
+gmail: pinzynierska0@gmail.com
+hasło: Test123#
+
+haslo PayPal: CXdMbz2jhv(D4FV
+
+https://www.sandbox.paypal.com/pl/business
+hasło: CXdMbz2jhv(D4FV
+
+
+
+-----------------------------------------------------------
+inzynierkap@gmail.com
+hasło: Test123#
+
+https://www.sandbox.paypal.com/pl/business
+hasło: CXdMbz2jhv(D4FV
+
+
+Nazwa użytkownika API: inzynierkap_api1.gmail.com
+Hasło API: 6DN8PF5PSFL93P2N
+Podpis: A832i9ijUIs.sxEZ.NvVX9mogPCYA5PqudG85uiOGTf6F-Ip-wXqs8Sj
+"access_token": "A21AALlk5DUlP_CGX_gZoGyo421BG7TI0qYYOtLClQ4SxQSmOvGRw9CRMv4yybdgwi8gYbTy0UUaVLDMc18yA89mmQWWck7fw",

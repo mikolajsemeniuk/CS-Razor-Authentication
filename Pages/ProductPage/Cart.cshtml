@@ -13,8 +13,18 @@
                     <td>@item.Product.Name</td>
                     <td>@item.Product.Price</td>
                     <td>@item.Quantity</td>
+                    
                 </tr>         
              }
+             <tr>
+               <td colspan="4" align="right">Total</td>
+               <td>@Model.Total</td>
+             </tr>
              </table>     
        <a asp-page ="/Index">Continue Shopping</a>
-     </div>  
+      <div class="col-3 text-right">
+        <div class="button">
+        <a asp-page="/ProductPage/Pay" class="mt-2 btn btn-success form-control" >Pay</a>
+        </div>
+      </div>
+   </div>  
