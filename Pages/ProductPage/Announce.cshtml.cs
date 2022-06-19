@@ -59,7 +59,7 @@ public class AnnounceModel : PageModel
                 {
                     files[0].CopyTo(fileStream);
                 }
-                savedProduct.Image = relativeImagePath;
+                savedProduct.Image = "images/" + product.Id + extension;
                 _context.SaveChanges();
             }
 
