@@ -28,15 +28,6 @@ public class RegisterModel : PageModel
         return Page();
     }
 
-    public IActionResult OnGet()
-    {
-        if (_signInManager.IsSignedIn(User))
-        {
-            return RedirectToPage("/Index");
-        }
-        return Page();
-    }
-
     public async Task<IActionResult> OnPost()
     {
         if (ModelState.IsValid)
