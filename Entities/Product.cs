@@ -1,7 +1,4 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using Enums;
-using Repositories;
-using Microsoft.AspNetCore.Identity;
 
 namespace Entities;
 

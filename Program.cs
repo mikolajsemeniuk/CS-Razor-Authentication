@@ -13,14 +13,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// var connectionSettings = new ConnectionSettings(new Uri("http://127.0.0.1:9200"));
-// .DefaultMappingFor<Product>(x => x.IndexName("products"));
-
-//builder.Services.AddSingleton<IElasticClient>(new ElasticClient(connectionSettings));
-
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddMvc();
-
 
 builder.Services.AddDefaultIdentity<Account>(options =>
 {
@@ -37,8 +31,8 @@ builder.Services.AddDefaultIdentity<Account>(options =>
     
 builder.Services.AddCloudscribePagination();
 
- builder.Services.AddMvc().AddSessionStateTempDataProvider(); //
- builder.Services.AddSession(); // 
+builder.Services.AddMvc().AddSessionStateTempDataProvider();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -52,20 +46,14 @@ if (!app.Environment.IsDevelopment())
  
 app.UseSession();
 
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-
-
 app.UseRouting();
 app.UseAuthentication();
-
         
 app.UseAuthorization();
 
 app.MapRazorPages();
-
-
 
 app.Run();

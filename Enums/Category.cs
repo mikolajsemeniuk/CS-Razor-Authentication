@@ -1,5 +1,6 @@
 namespace Enums;
-public enum Category{
+public enum Category
+{
     Pants = 0,
     Shirts = 1,
     Shoes = 2,
