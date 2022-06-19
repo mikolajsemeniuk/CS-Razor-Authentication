@@ -51,10 +51,10 @@ public class AnnounceModel : PageModel
 
             if (files.Count !=0)
             {
-                string imagePath = Path.Combine(_env.WebRootPath, "Images");
+                string imagePath = Path.Combine(_env.WebRootPath, "images/");
                 var extension = Path.GetExtension(files[0].FileName);
                 var relativeImagePath = imagePath + product.Id + extension;
-                var absImagePath = Path.Combine(wwrootPath,relativeImagePath);
+                var absImagePath = Path.Combine(wwrootPath, relativeImagePath);
                 using (var fileStream = new FileStream(absImagePath, FileMode.Create))
                 {
                     files[0].CopyTo(fileStream);
