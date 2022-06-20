@@ -18,7 +18,7 @@ public class PayModel : PageModel
     private readonly SignInManager<Entities.Account> _signInManager;
     private readonly UserManager<Entities.Account> _userManager;
     private readonly ILogger<PayModel> _logger;    
-
+    public string paypalRedirectURL = null; 
     public PayModel( ILogger<PayModel> logger, DataContext context, UserManager<Entities.Account> userManager, SignInManager<Entities.Account> signIn)
     {
         
@@ -43,11 +43,11 @@ public class PayModel : PageModel
                                      "/ProductPage/Pay?id=" + guid;
 
                     var createPayment = CreatePayment(apicontext, baseURi, guid);
-                    var breakpoint = "break";
+
 
                     
                     var links = createPayment.links.GetEnumerator();
-                    string paypalRedirectURL = null;
+                    
 
                     while (links.MoveNext())
                     {
@@ -57,9 +57,8 @@ public class PayModel : PageModel
                         {
                             paypalRedirectURL = lnk.href;
                         }
-
-
                     }
+
                 }
                 else
                 {
@@ -80,8 +79,8 @@ public class PayModel : PageModel
         {
             return RedirectToPage("/ProductPage/Cancel");
         }
+    return new RedirectResult(paypalRedirectURL);
 
-       return RedirectToPage("/ProductPage/Success");
     }
     private object ExecutePayment(APIContext apicontext, string payerId, string PaymentId)
         {
@@ -120,23 +119,21 @@ public class PayModel : PageModel
                     cancel_url = "http://localhost:7071/ProductPage/Cancel"
                 };
                 string subtotal =cart.Sum(item => item.Product.Price * item.Quantity).ToString().Replace(',','.');
-                //string sobtotalReplace  = subtotal1.Replace(',','.');
+
                 var details = new Details()
                 {   
                     subtotal = subtotal,
-                    tax = "0.07",
-                    shipping = "0.03",
-                    handling_fee ="1.00",
-                    shipping_discount = "-1.00",
-                    insurance = "0.01"
+                    tax = "0.00",
+                    shipping = "0.00",
+                    handling_fee ="0.00",
+                    shipping_discount = "0.00",
+                    insurance = "0.00"
                 };
                 
-                //var total1 = decimal.Parse(details.tax.Replace('.',',') + details.shipping.Replace('.',',') + details.subtotal.Replace('.',',') + details.insurance.Replace('.',','));
-                //string total = total1.ToString().Replace(',','.');
 
                 var amount = new Amount()
                 {
-                    total = "10.11", //naprawic zeby nei było zkardkodowane
+                    total = subtotal, 
                     currency = "USD",                    
                     details = details
                 };
@@ -182,4 +179,5 @@ public class PayModel : PageModel
             return this.payment.Create(apicontext);
 
         }
+
 }
