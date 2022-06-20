@@ -4,6 +4,7 @@ html * {
     /* 37, 166, 177  */
     /* 250, 250, 250 */
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a.navbar-brand {
