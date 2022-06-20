@@ -1,30 +1,47 @@
 @page
 @model Cart
 
-
-<title>Cart</title>
-<h3>Cart Info</h3>
-<div class="div-main">
+<div class="my-3 p-3 bg-white rounded box-shadow">
+  <h3 class="border-bottom border-gray pb-2 mb-0">Cart <i class="bi bi-bag-check"></i></h3>
+  @foreach (var item in Model.cart)
+  {
+    <div class="media text-muted pt-3">
+      <img src="~/@item.Product.Image" style="width: 32px; height: 32px;">
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">@item.Product.Name</strong>
+        <span>@item.Product.Description</span>
+        <strong class="d-block text-success">price: @item.Product.Price$, quantity: @item.Quantity</strong>
+      </p>
+    </div>
+  }
+  <small class="d-block text-right mt-3">
+    <a asp-page="/Index" class="px-4 btn btn-outline-primary">Continue shopping</a>
+    <a asp-page="/ProductPage/Pay" class="px-4 btn btn-primary">Pay</a>
+  </small>
+</div>
+@* <title>Cart</title>
+  <h3>Cart Info</h3>
+  <div class="div-main">
   <table class="table table-striped">
-    @foreach (var item in Model.cart)
-    {
-      <tr>
-        <td>@item.Product.Id</td>
-        <td>@item.Product.Name</td>
-        <td>@item.Product.Price</td>
-        <td>@item.Quantity</td>
+  @foreach (var item in Model.cart)
+  {
+  <tr>
+  <td>@item.Product.Id</td>
+  <td>@item.Product.Name</td>
+  <td>@item.Product.Price</td>
+  <td>@item.Quantity</td>
 
-      </tr>
-    }
-    <tr>
-      <td colspan="4" align="right">Total</td>
-      <td>@Model.Total</td>
-    </tr>
+  </tr>
+  }
+  <tr>
+  <td colspan="4" align="right">Total</td>
+  <td>@Model.Total</td>
+  </tr>
   </table>
   <a asp-page="/Index">Continue Shopping</a>
   <div class="col-3 text-right">
-    <div class="button">
-      <a asp-page="/ProductPage/Pay" class="mt-2 btn btn-success form-control">Pay</a>
-    </div>
+  <div class="button">
+  <a asp-page="/ProductPage/Pay" class="mt-2 btn btn-success form-control">Pay</a>
   </div>
-</div>
+  </div>
+  </div> *@
