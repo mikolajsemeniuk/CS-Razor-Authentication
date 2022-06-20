@@ -12,6 +12,10 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+
+
+
 builder.Services.AddScoped<IPersonService, PersonService>();
 builder.Services.AddMvc();
 
@@ -27,7 +31,8 @@ builder.Services.AddDefaultIdentity<Account>(options =>
     .AddSignInManager<SignInManager<Account>>()
     .AddRoleValidator<RoleValidator<Role>>()
     .AddEntityFrameworkStores<DataContext>();
-    
+
+
 builder.Services.AddCloudscribePagination();
 
 builder.Services.AddMvc().AddSessionStateTempDataProvider();

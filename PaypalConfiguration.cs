@@ -3,19 +3,17 @@ using System.Web;
 using PayPal.Api;
 using System.Collections.Generic;
 
-namespace application.PayPal;
+namespace application;
   
     public class PaypalConfiguration
     {
         public readonly static string clientId;
         public readonly static string clientSecret;
-
-
         static PaypalConfiguration()
         {
             var config = getconfig();
-            clientId = "ASe6yrJkEszuyBLgBYYiXo2HovihJmiy5SyU4OZx7LsZSnHp3CWCAjkIdbLzfzkn-1OfOUZ6h865d8r6";
-            clientSecret = "EMaugxh3s9YT0bP-lfs1_xjnzYxTUP8QGjqqhGlrKqFacwLZY7JyfO_j4QZfsuDHEobefMrHQVu6c4GF";
+            clientId = "AQisFmSHllJGx8UhcAYS-IP4Eg8Subi1yoWx3JTbFzgxBstymCFOb61vGJSt48-lm0Wox2k-aHN__Daa";
+            clientSecret = "EE9TdNiAxvu4_WjjFuva0lV1MX2Gvs9280nXkAyNi7dZsGSLv9KGkAE20iylAwZ1lPOHqwqZsRJ2E7zB";
         }
 
         private static Dictionary<string, string> getconfig()

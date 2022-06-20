@@ -59,12 +59,16 @@ public class Cart : PageModel
                     Total = Total + cart.Sum(item => item.Product.Price * item.Quantity);
                 }
                 JSON.Marshal(HttpContext.Session, "cart", cart);
-            }
-            
+            }           
         }
         else
         {
-            try{}
+            try
+            {   
+                cart = JSON.Unmarshal<List<Item>>(HttpContext.Session, "cart") ?? new List<Item>();
+                JSON.Marshal(HttpContext.Session, "cart", cart);
+                Total = Total + cart.Sum(item => item.Product.Price * item.Quantity);
+            }
             catch{
                 throw new Exception("Product unknown");
             }      
