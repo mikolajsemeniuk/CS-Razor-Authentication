@@ -97,14 +97,20 @@ public class PayModel : PageModel
             List<Entities.Item> cart = JSON.Unmarshal<List<Entities.Item>>(HttpContext.Session, "cart") ?? new List<Entities.Item>();
             if (cart!=null)
             {              
+                string _itemPrice = default;
                 foreach (var item in cart)
                 {
+                    if(item.Product.Price !=null)
+                    {
+                        _itemPrice = item.Product.Price.ToString();
+                        _itemPrice = _itemPrice.Replace(',','.');
+                    }
                     ItemLIst.items.Add(new PayPal.Api.Item()
                     {
                         name = item.Product.Name.ToString(),
                         description = item.Product.Description.ToString(),
                         quantity = item.Quantity.ToString(),
-                        price = "10.00",//item.Product.Price.ToString(),
+                        price = _itemPrice,
                         tax = "0.07",
                         sku = "1.00",
                         currency = "USD"                
